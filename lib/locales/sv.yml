@@ -1,5 +1,5 @@
 # coding: utf-8
-no-nb:
+sv:
   faker:
     address:
       city_root: ["Ny", "Bro", "Lin", "Gammel", "Katt", "Upp", "Norr", "Mal", "Nord", "När", "Sand", "Sme", "Löv", "Göte", "Halm", "Bo", "Väst"]
