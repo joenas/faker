@@ -1,0 +1,52 @@
+# coding: utf-8
+no-nb:
+  faker:
+    address:
+      city_root: ["Ny", "Bro", "Lin", "Gammel", "Katt", "Upp", "Norr", "Mal", "Nord", "När", "Sand", "Sme", "Löv", "Göte", "Halm", "Bo", "Väst"]
+      city_suffix: ["berg", "borg", "by", "dal", "ed", "fallet", "fors", "arp", "hamn", "hed", "hammar", "mark", "näs", "köping", "sala", "sjö", "stad", "strand", "ström", "sund", "vik", "vad", "åker", "ö", "ör", "ås"]
+      street_prefix: ["Övre", "Nedre", "Södra", "Gamla", "Östra", "Västra"]
+      street_root: ["Ek", "Björk", "Gran", "Berg", "Furu", "Lill", "Stor", "Hög", "Fors", "Älv", "Ko", "Trast", "Sten", "Häst", "Fiol", "Sol", "Stol", "Malm", "Klock", "Präst", "Damm", "Kvast", "Bäck", "Berg", "Kyrk", "Kors", "Bro", "Koppar", "Torg", "Sjö"]
+      street_suffix: ["alléen", "backen", "berget", "bråten", "eggen", "ängen", "gata", "gjärdet", "gränden", "gropen", "hagen", "hamnen", "kullen", "kroken", "marken", "myren", "platsen", "ringen", "skogen", "slänten", "språnget", "stigen", "stranden", "stubben", "svängen", "tjärnen", "toppen", "tunet", "viken", "åsen"]
+      common_street_suffix: ["sgatan", "sväg", "s Gata", "s Väg", "gatan", "vägen"]
+      building_number: ["#", "##"]
+      secondary_address: ['Lgh. ###', '# tr', '# tr']
+      postcode: ["####", "####", "####", "0###"]
+      state: [""]
+      city:
+        - "#{city_root}#{city_suffix}"
+      street_name:
+        - "#{street_root}#{street_suffix}"
+        - "#{street_prefix} #{street_root}#{street_suffix}"
+        - "#{Name.first_name}#{common_street_suffix}"
+        - "#{Name.last_name}#{common_street_suffix}"
+      street_address:
+        - "#{street_name} #{building_number}"
+      default_country: [Sverige]
+
+    company:
+      suffix: ["AB", "HB"]
+      name:
+        - "#{Name.last_name} #{suffix}"
+        - "#{Name.last_name}-#{Name.last_name}"
+        - "#{Name.last_name}, #{Name.last_name} och #{Name.last_name}"
+
+    internet:
+      domain_suffix: ["se", "com", "net", "org"]
+
+    name:
+      first_name: ["Emma", "Sara", "Thea", "Ida", "Julie", "Nora", "Emilie", "Ingrid", "Hanna", "Maria", "Sofie", "Anna", "Malin", "Amalie", "Vilde", "Frida", "Andrea", "Tuva", "Victoria", "Mia", "Karoline", "Mathilde", "Martine", "Linnea", "Hedda", "Marie", "Helene", "Silje", "Leah", "Maja", "Elise", "Kristine", "Aurora", "Kaja", "Camilla", "Mari", "Mina", "Selma", "Jenny", "Celine", "Elin", "Natalie", "Synne", "Sandra", "Madeleine", "Markus", "Mathias", "Kristian", "Jonas", "Andreas", "Alexander", "Martin", "Sander", "Daniel", "Magnus", "Henrik", "Tobias", "Kristoffer", "Emil", "Adrian", "Sebastian", "Marius", "Elias", "Fredrik", "Thomas", "Sondre", "Benjamin", "Jakob", "Oliver", "Lucas", "Oskar", "Nikolai", "Filip", "Mats", "William", "Erik", "Simen", "Ole", "Eirik", "Isak", "Kasper", "Noah", "Lars", "Joakim", "Johannes", "Håkon", "Sindre", "Jörgen", "Herman", "Anders", "Jonathan", "Even", "Theodor", "Mikkel", "Aksel"] # duplication, unfortunately
+      feminine_name: ["Emma", "Sara", "Thea", "Ida", "Julie", "Nora", "Emilie", "Ingrid", "Hanna", "Maria", "Sofie", "Anna", "Malin", "Amalie", "Vilde", "Frida", "Andrea", "Tuva", "Victoria", "Mia", "Karoline", "Mathilde", "Martine", "Linnea", "Hedda", "Marie", "Helene", "Silje", "Leah", "Maja", "Elise", "Kristine", "Aurora", "Kaja", "Camilla", "Mari", "Mina", "Selma", "Jenny", "Celine", "Elin",  "Natalie", "Sandra", "Madeleine"]
+      masculine_name: ["Markus", "Mathias", "Kristian", "Jonas", "Andreas", "Alexander", "Martin", "Daniel", "Magnus", "Henrik", "Tobias", "Kristoffer", "Emil", "Adrian", "Sebastian", "Marius", "Elias", "Fredrik", "Thomas", "Benjamin", "Jakob", "Oliver", "Lucas", "Oskar", "Filip", "Mats", "William", "Erik", "Simon", "Olle", "Erik", "Isak", "Kasper", "Noah", "Lars", "Joakim", "Johannes", "Håkan", "Jörgen", "Herman", "Anders", "Jonathan", "Even", "Theodor", "Mikael", "Axel"]
+      last_name: ["Johansson", "Hansson", "Anderson", "Kristianson", "Larsson", "Olsson", "Solberg", "Andreason", "Pettersson", "Nilsson", "Berg", "Karlson", "Svensson", "Jönsson", "Martinsson", "Eriksson", "Jonson", "Johannesson", "Nilsson", "Pettersson", "Gunnarsson", "Strand", "Jörgensson", "Kristoffersson", "Jakobsson", "Holm", "Andreasson", "Jacobsson", "Krogh", "Christiansson", "Berg", "Torp", "Henriksson", "Fjellman", "Danielsson", "Fredriksson", "Dahl", "Berntsson", "Arnesson", "Thoresson", "Skoglund", "Carlsson", "Rasmusson", "Nygård", "Nordby", "Svärd", "Skog", "Adolfsson", "Ahlstrand", "Ask", "Backman", "Bergsten", "Ek", "Edberg", "Hansson", "Hallgren", "Falck", "Borgström", "Granström", "Lundberg", "Lövgren", "Ivarsson", "Kvist", "Sandberg", "Malmberg"]
+      prefix: [Dr., Prof.]
+      suffix: [Jr., Sr., I, II, III, IV, V]
+      name:
+        - "#{prefix} #{first_name} #{last_name}"
+        - "#{first_name} #{last_name} #{suffix}"
+        - "#{feminine_name} #{feminine_name} #{last_name}"
+        - "#{masculine_name} #{masculine_name} #{last_name}"
+        - "#{first_name} #{last_name} #{last_name}"
+        - "#{first_name} #{last_name}"
+
+    phone_number:
+      formats: ["########", "## ## ## ##", "### ## ###", "+47 ## ## ## ##"]
