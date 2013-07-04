@@ -34,7 +34,7 @@ sv:
       domain_suffix: ["se", "com", "net", "org"]
 
     name:
-      first_name: ["Emma", "Sara", "Thea", "Ida", "Julie", "Nora", "Emilie", "Ingrid", "Hanna", "Maria", "Sofie", "Anna", "Malin", "Amalie", "Vilde", "Frida", "Andrea", "Tuva", "Victoria", "Mia", "Karoline", "Mathilde", "Martine", "Linnea", "Hedda", "Marie", "Helene", "Silje", "Leah", "Maja", "Elise", "Kristine", "Aurora", "Kaja", "Camilla", "Mari", "Mina", "Selma", "Jenny", "Celine", "Elin", "Natalie", "Synne", "Sandra", "Madeleine", "Markus", "Mathias", "Kristian", "Jonas", "Andreas", "Alexander", "Martin", "Sander", "Daniel", "Magnus", "Henrik", "Tobias", "Kristoffer", "Emil", "Adrian", "Sebastian", "Marius", "Elias", "Fredrik", "Thomas", "Sondre", "Benjamin", "Jakob", "Oliver", "Lucas", "Oskar", "Nikolai", "Filip", "Mats", "William", "Erik", "Simen", "Ole", "Eirik", "Isak", "Kasper", "Noah", "Lars", "Joakim", "Johannes", "Håkon", "Sindre", "Jörgen", "Herman", "Anders", "Jonathan", "Even", "Theodor", "Mikkel", "Aksel"] # duplication, unfortunately
+      first_name: ["Emma", "Sara", "Thea", "Ida", "Julie", "Nora", "Emilie", "Ingrid", "Hanna", "Maria", "Sofie", "Anna", "Malin", "Amalie", "Vilde", "Frida", "Andrea", "Tuva", "Victoria", "Mia", "Karoline", "Mathilde", "Martine", "Linnea", "Hedda", "Marie", "Helene", "Silje", "Leah", "Maja", "Elise", "Kristine", "Aurora", "Kaja", "Camilla", "Mari", "Mina", "Selma", "Jenny", "Celine", "Elin", "Natalie", "Synne", "Sandra", "Madeleine", "Markus", "Mathias", "Kristian", "Jonas", "Andreas", "Alexander", "Martin", "Daniel", "Magnus", "Henrik", "Tobias", "Kristoffer", "Emil", "Adrian", "Sebastian", "Marius", "Elias", "Fredrik", "Thomas", "Benjamin", "Jakob", "Oliver", "Lucas", "Oskar", "Filip", "Mats", "William", "Erik", "Simon", "Olle", "Erik", "Isak", "Kasper", "Noah", "Lars", "Joakim", "Johannes", "Håkan", "Jörgen", "Herman", "Anders", "Jonathan", "Even", "Theodor", "Mikael", "Axel"] # duplication, unfortunately
       feminine_name: ["Emma", "Sara", "Thea", "Ida", "Julie", "Nora", "Emilie", "Ingrid", "Hanna", "Maria", "Sofie", "Anna", "Malin", "Amalie", "Vilde", "Frida", "Andrea", "Tuva", "Victoria", "Mia", "Karoline", "Mathilde", "Martine", "Linnea", "Hedda", "Marie", "Helene", "Silje", "Leah", "Maja", "Elise", "Kristine", "Aurora", "Kaja", "Camilla", "Mari", "Mina", "Selma", "Jenny", "Celine", "Elin",  "Natalie", "Sandra", "Madeleine"]
       masculine_name: ["Markus", "Mathias", "Kristian", "Jonas", "Andreas", "Alexander", "Martin", "Daniel", "Magnus", "Henrik", "Tobias", "Kristoffer", "Emil", "Adrian", "Sebastian", "Marius", "Elias", "Fredrik", "Thomas", "Benjamin", "Jakob", "Oliver", "Lucas", "Oskar", "Filip", "Mats", "William", "Erik", "Simon", "Olle", "Erik", "Isak", "Kasper", "Noah", "Lars", "Joakim", "Johannes", "Håkan", "Jörgen", "Herman", "Anders", "Jonathan", "Even", "Theodor", "Mikael", "Axel"]
       last_name: ["Johansson", "Hansson", "Anderson", "Kristianson", "Larsson", "Olsson", "Solberg", "Andreason", "Pettersson", "Nilsson", "Berg", "Karlson", "Svensson", "Jönsson", "Martinsson", "Eriksson", "Jonson", "Johannesson", "Nilsson", "Pettersson", "Gunnarsson", "Strand", "Jörgensson", "Kristoffersson", "Jakobsson", "Holm", "Andreasson", "Jacobsson", "Krogh", "Christiansson", "Berg", "Torp", "Henriksson", "Fjellman", "Danielsson", "Fredriksson", "Dahl", "Berntsson", "Arnesson", "Thoresson", "Skoglund", "Carlsson", "Rasmusson", "Nygård", "Nordby", "Svärd", "Skog", "Adolfsson", "Ahlstrand", "Ask", "Backman", "Bergsten", "Ek", "Edberg", "Hansson", "Hallgren", "Falck", "Borgström", "Granström", "Lundberg", "Lövgren", "Ivarsson", "Kvist", "Sandberg", "Malmberg"]
@@ -42,11 +42,10 @@ sv:
       suffix: [Jr., Sr., I, II, III, IV, V]
       name:
         - "#{prefix} #{first_name} #{last_name}"
-        - "#{first_name} #{last_name} #{suffix}"
-        - "#{feminine_name} #{feminine_name} #{last_name}"
-        - "#{masculine_name} #{masculine_name} #{last_name}"
+        - "#{feminine_name} #{last_name}"
+        - "#{masculine_name} #{last_name}"
         - "#{first_name} #{last_name} #{last_name}"
         - "#{first_name} #{last_name}"
 
     phone_number:
-      formats: ["########", "## ## ## ##", "### ## ###", "+47 ## ## ## ##"]
+      formats: ["0##-#######", "0###-#####", "0#-########", "+46 ##-#######", "+46 ###-#####", "+46 #-########"]
